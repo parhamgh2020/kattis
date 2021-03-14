@@ -1,20 +1,22 @@
-def model(string):
-    dot = 0
-    star = 0
-    if string == '*':
-        return dot, 1
-    for i in range(1, len(string)):
-        if string[i] == '.':
-            dot += 1
-        if string[i] == '*':
-            star += 1
-        if string[i] == '*' and dot > 0:
-            return dot, star
-    return dot, star
+n = 1
+while True:
+    s = input()
+    if s == 'END':
+        break
+    if len(s) == 1 or len(set((lambda z: [z[i + 1] - z[i] for i in range(len(z) - 1)])(
+            list(map(lambda y: y[0], (filter(lambda x: x[1] == '*', enumerate(list(s))))))))) == 1:
+        print(n, 'EVEN')
+    else:
+        print(n, 'NOT EVEN')
+    n += 1
 
 
-def find_even(string, model):
-    dot, star = model(string)
-    len_model = model[0] + model[1]
-    for i in range(0, len(string),len_model):
-
+i = 0
+while True:
+    n += 1
+    inp = input()
+    if inp == 'END':
+        break
+    if inp == '*':
+        print(n,'EVEN')
+        continue

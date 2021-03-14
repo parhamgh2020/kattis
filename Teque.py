@@ -31,17 +31,3 @@ while True:
     except EOFError:
         break
 
-# teque = Teque()
-# for i in range(int(stdin.readline())):
-#     l = stdin.readline().split()
-#     if l[0] == 'push_back':
-#         teque.push_back(int(l[1]))
-#
-#     elif l[0] == 'push_front':
-#         teque.push_front(int(l[1]))
-#
-#     elif l[0] == 'push_middle':
-#         teque.push_middle(int(l[1]))
-#     else:
-#         stdout.write(str(teque.get(int(l[1]))) + '\n')
-
